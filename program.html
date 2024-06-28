@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Flexarium - Programs</title>
+    <style>
+        .programs_container {
+            text-align: center;
+        }
+
+        .programs_grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .program_card {
+            padding: 2rem;
+            background-color: var(--primary-color-light);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .program_card:hover {
+            transform: translateY(-10px);
+        }
+
+        .program_card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .program_card h3 {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .program_card p {
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav_logo">
+            <a href="#"><img src="/asset/logo.png" alt="logo"></a>
+        </div>
+        <ul class="nav_links">
+            <li class="link"><a href="skeleton.html">Home</a></li>
+            <li class="link"><a href="program.html">Program</a></li>
+            <li class="link"><a href="service.html">Service</a></li>
+            <li class="link"><a href="about.html">About</a></li>
+            <li class="link"><a href="timings.html">Timings</a></li>
+        </ul>
+        <a href="#"><button class="btn">Register</button></a>
+    </nav>
+
+    <section class="section_container programs_container">
+        <h2 class="section_header">Our Programs</h2>
+        <div class="programs_grid">
+            <div class="program_card">
+                <img src="/asset/yoga.jpg" alt="Yoga">
+                <h3>Yoga</h3>
+                <p>Improve your flexibility, strength, and mental well-being with our Yoga classes.</p>
+            </div>
+            <div class="program_card">
+                <img src="/asset/cardio.jpg" alt="Cardio">
+                <h3>Cardio</h3>
+                <p>Boost your cardiovascular health with our high-intensity cardio sessions.
+                    High-intensity cardio sessions not only elevate your heart rate but also improve oxygen utilization.
+                </p>
+            </div>
+            <div class="program_card">
+                <img src="/asset/weightlifting.jpg" alt="Weightlifting">
+                <h3>Weightlifting</h3>
+                <p>Build muscle and increase your strength with our weightlifting program.</p>
+            </div>
+            <div class="program_card">
+                <img src="/asset/spinning.jpg" alt="Spinning">
+                <h3>Spinning</h3>
+                <p>Join our high-energy spinning classes for an intense and fun workout.</p>
+            </div>
+            <div class="program_card">
+                <img src="/asset/boxing.jpg" alt="Boxing">
+                <h3>Boxing</h3>
+                <p>Learn self-defense and get in shape with our boxing classes.</p>
+            </div>
+            <div class="program_card">
+                <img src="/asset/pilates.jpg" alt="Pilates">
+                <h3>Pilates</h3>
+                <p>Strengthen your core and improve your posture with Pilates.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section_container footer_container">
+        <span class="bg_blur"></span>
+        <span class="bg_blur footer_blur"></span>
+        <div class="footer_col">
+            <div class="footer_logo"><img src="/asset/logo.png" alt="logo" /></div>
+            <p>
+                Embark on the journey to a healthier, stronger self with our unmatched pricing options. Together, let's strive, 
+                succeed, and triumph, one workout at a time!
+            </p>
+            <div class="footer_socials">
+                <a href="https://wa.me/+918750950248"><i class="ri-whatsapp-fill"></i></a>
+                <a href="https://www.instagram.com/jhanvi59034/"><i class="ri-instagram-line"></i></a>
+                <a href="mailto:shrutirao1414@gmail.com"><i class="ri-mail-fill"></i></a>
+            </div>
+        </div>
+        <div class="footer_col">
+            <h4>Popular Tags</h4>
+            <a href="#">#HealthyLiving</a>
+            <a href="#">#Flexibility</a>
+            <a href="#">#MindBodyBalance</a>
+            <a href="#">#MindBodyBalance</a>
+        </div>
+        <div class="footer_col">
+            <h4>Trainer profiles</h4>
+            <a href="#">Avinash</a>
+            <a href="#">Jayesh</a>
+            <a href="#">Vrish</a>
+        </div>
+        <div class="footer_col">
+            <h4>About</h4>
+            <a href="Timings.html">Opening Hours</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Copyright Information</a>
+        </div>
+    </footer>
+    <div class="footer_bar">
+        Copyright © 2023 Web Design Mastery. All rights reserved.
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuButton = document.querySelector('.menu-button');
+            const navLinks = document.querySelector('.nav_links');
+            menuButton.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            const modalButtons = document.querySelectorAll('.btn');
+            const modalOverlay = document.querySelector('.modal-overlay');
+
+            modalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    modalOverlay.classList.add('active');
+                });
+            });
+
+            modalOverlay.addEventListener('click', event => {
+                if (event.target === modalOverlay) {
+                    modalOverlay.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

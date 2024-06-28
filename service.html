@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Flexarium - Services</title>
+    <style>
+        .services_container {
+            text-align: center;
+        }
+
+        .services_grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service_card {
+            padding: 2rem;
+            background-color: var(--primary-color-light);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .service_card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service_card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .service_card h3 {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .service_card p {
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav_logo">
+            <a href="#"><img src="/asset/logo.png" alt="logo"></a>
+        </div>
+        <ul class="nav_links">
+            <li class="link"><a href="skeleton.html">Home</a></li>
+            <li class="link"><a href="program.html">Program</a></li>
+            <li class="link"><a href="service.html">Service</a></li>
+            <li class="link"><a href="about.html">About</a></li>
+            <li class="link"><a href="timings.html">Timings</a></li>
+        </ul>
+        <a href="#"><button class="btn">Register</button></a>
+    </nav>
+
+    <section class="section_container services_container">
+        <h2 class="section_header">Our Services</h2>
+        <div class="services_grid">
+            <div class="service_card">
+                <img src="/asset/personal_training.jpg" alt="Personal Training">
+                <h3>Personal Training</h3>
+                <p>Get one-on-one training sessions with our certified personal trainers to achieve your fitness goals.</p>
+            </div>
+            <div class="service_card">
+                <img src="/asset/nutrition_counseling.jpg" alt="Nutrition Counseling">
+                <h3>Nutrition Counseling</h3>
+                <p>Receive personalized nutrition advice and meal plans from our expert nutritionists.</p>
+            </div>
+            <div class="service_card">
+                <img src="/asset/spa_services.jpg" alt="Spa Services">
+                <h3>Spa Services</h3>
+                <p>Relax and rejuvenate with our range of spa services including massages, facials, and more.</p>
+            </div>
+            <div class="service_card">
+                <img src="/asset/group_classes.jpg" alt="Group Classes">
+                <h3>Group Classes</h3>
+                <p>Join our dynamic group classes and enjoy working out in a fun, motivating environment.</p>
+            </div>
+            <div class="service_card">
+                <img src="/asset/sauna.jpg" alt="Sauna">
+                <h3>Sauna</h3>
+                <p>Detoxify and unwind in our state-of-the-art sauna facilities available to all members.</p>
+            </div>
+            <div class="service_card">
+                <img src="/asset/childcare.jpg" alt="Childcare">
+                <h3>Childcare</h3>
+                <p>Make the most of your workout while we take care of your little ones in our safe and fun childcare center.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section_container footer_container">
+        <span class="bg_blur"></span>
+        <span class="bg_blur footer_blur"></span>
+        <div class="footer_col">
+            <div class="footer_logo"><img src="/asset/logo.png" alt="logo" /></div>
+            <p>
+                Embark on the journey to a healthier, stronger self with our unmatched pricing options. Together, let's strive, 
+                succeed, and triumph, one workout at a time!
+            </p>
+            <div class="footer_socials">
+                <a href="https://wa.me/+918750950248"><i class="ri-whatsapp-fill"></i></a>
+                <a href="https://www.instagram.com/jhanvi59034/"><i class="ri-instagram-line"></i></a>
+                <a href="mailto:shrutirao1414@gmail.com"><i class="ri-mail-fill"></i></a>
+            </div>
+        </div>
+        <div class="footer_col">
+            <h4>Popular Tags</h4>
+            <a href="#">#HealthyLiving</a>
+            <a href="#">#Flexibility</a>
+            <a href="#">#MindBodyBalance</a>
+            <a href="#">#MindBodyBalance</a>
+        </div>
+        <div class="footer_col">
+            <h4>Trainer profiles</h4>
+            <a href="#">Avinash</a>
+            <a href="#">Jayesh</a>
+            <a href="#">Vrish</a>
+        </div>
+        <div class="footer_col">
+            <h4>About</h4>
+            <a href="Timings.html">Opening Hours</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Copyright Information</a>
+        </div>
+    </footer>
+    <div class="footer_bar">
+        Copyright © 2023 Web Design Mastery. All rights reserved.
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuButton = document.querySelector('.menu-button');
+            const navLinks = document.querySelector('.nav_links');
+            menuButton.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            const modalButtons = document.querySelectorAll('.btn');
+            const modalOverlay = document.querySelector('.modal-overlay');
+
+            modalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    modalOverlay.classList.add('active');
+                });
+            });
+
+            modalOverlay.addEventListener('click', event => {
+                if (event.target === modalOverlay) {
+                    modalOverlay.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
